@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e2f4f2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a9782;
+    padding: 12px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Menu {
+    display: flex;
+    gap: 15px;
+}
+
+.Menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.Menu a:hover {
+    background-color: #0f5f52;
+}
+
+.hamburger {
+    background: none;
+    color: white;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.bubble {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.bubble h1 {
+    color: #1a9782;
+    margin-bottom: 10px;
+}
+
+.bubble h2 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.bubble p {
+    color: #666;
+}
+
+.discord-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #1a9782;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.discord-btn:hover {
+    background: #0f5f52;
+    transform: scale(1.07);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+.store-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #1a9782;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-top: 15px;
+}
+
+.store-btn:hover {
+    background: #0f5f52;
+    transform: scale(1.07);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .Menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1a9782;
+        flex-direction: column;
+        width: 180px;
+        padding: 10px;
+        display: none;
+        border-radius: 0 0 0 10px;
+    }
+
+    .Menu.show {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(100%); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+}
